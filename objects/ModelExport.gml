@@ -39,13 +39,13 @@ if (mat>=0) {
 }
 if (fn=="") fn="model"
 if (g3z) {
-    var fn; fn=get_save_filename("Packed GM Model|*.g3z",fn+".g3z")
+    var fn; fn=get_save_filename("Packed GM Model|*.g3z",fn)
     if (fn=="") exit
-    d3d_model_save_g3z(Controller.models[m,0],fn)
+    d3d_model_save_g3z(Controller.models[m,0],filename_change_ext(fn,".g3z"))
 } else {
-    var fn; fn=get_save_filename("Game Maker model|*.g3d",fn+".g3d")
+    var fn; fn=get_save_filename("Game Maker model|*.g3d",fn)
     if (fn=="") exit
-    d3d_model_save(Controller.models[m,0],fn)
+    d3d_model_save(Controller.models[m,0],filename_change_ext(fn,".g3d"))
 }
 #define Draw_0
 /*"/*'/**//* YYD ACTION
